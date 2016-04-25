@@ -1,0 +1,14 @@
+# Java:
+#   image: "java:latest"
+# Ruby:
+#   image: "ruby:latest"
+  php:
+    build: ./php
+    volumes:
+      - ./php:/root/php
+    command:
+      - /bin/bash
+      - /root/php/bootstrap.sh
+
+# Node:
+#   image: "node:latest"
