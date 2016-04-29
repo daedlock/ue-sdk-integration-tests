@@ -102,14 +102,14 @@ app.createUser().then(function (user) {
 
     }).then(function (uris) {
       if(uris.length)
-        printSuccess("Post Twitter");
+        printSuccess("Post Tweet");
       else {
-        printError("Post Twitter");
+        printError("Post Tweet");
 
       }
     })
     .catch(function(err) {
-      printError("Post Twitter");
+      printError("Post Tweet");
     })
     .then(function () {
       if(twConnection){
