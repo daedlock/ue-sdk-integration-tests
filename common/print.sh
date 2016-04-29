@@ -3,6 +3,7 @@
 #Colors
 red="\033[01;31m";
 green="\033[01;32m";
+gray="\033[01;39m";
 reset="\033[01;0m";
 
 #Emoji
@@ -12,11 +13,11 @@ cross="✖";
 
 success ()
 {
-    echo -e $green $"$check" $reset $*
+    echo -e $green $check $gray $* $reset [$green OK $reset]
 }
 
 error () {
-   echo -e $red $cross $reset $*
+   echo -e $red $cross $gray $* $reset [$red FAIL $reset]
 }
 
 case $1 in

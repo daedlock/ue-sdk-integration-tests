@@ -5,10 +5,15 @@
   php:
     build: ./php
     volumes:
-      - ./php:/root/php
+      - .:/root/sdk-integration-tests
     command:
       - /bin/bash
-      - /root/php/bootstrap.sh
+      - /root/sdk-integration-tests/php/bootstrap.sh
 
-# Node:
-#   image: "node:latest"
+  node:
+   build: ./node
+   volumes:
+     - .:/root/sdk-integration-tests
+   command:
+     - /bin/bash
+     - /root/sdk-integration-tests/node/bootstrap.sh
