@@ -143,13 +143,3 @@ app.createUser().then(function (user) {
   })
 
 })
-
-// POST FACEBOOK PROFILE
-
-//POST TWEET
-
-//TODO: POST FACEBOOK PAGE
-
-//DELETE FACEBOOK CONNECTION
-
-//DELETE TWITTER CONNECTION
