@@ -17,3 +17,11 @@
    command:
      - /bin/bash
      - /root/sdk-integration-tests/node/bootstrap.sh
+
+  ruby:
+    build: ./ruby
+    volumes:
+      - .:/root/sdk-integration-tests
+    command:
+      - /bin/bash
+      - /root/sdk-integration-tests/ruby/bootstrap.sh
