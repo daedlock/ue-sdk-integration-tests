@@ -1,3 +1,3 @@
 source 'https://rubygems.org'
 
-gem "ue-ruby-sdk"
+gem "ue-ruby-sdk", ">=1.1.13"
