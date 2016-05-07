@@ -25,3 +25,10 @@
     command:
       - /bin/bash
       - /root/sdk-integration-tests/ruby/bootstrap.sh
+  java:
+    build: ./java
+    volumes:
+      - .:/root/sdk-integration-tests
+    command:
+      - /bin/bash
+      - /root/sdk-integration-tests/java/bootstrap.sh

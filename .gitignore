@@ -1,2 +1,7 @@
 php/vendor/
 node/node_modules/
+java/.idea
+java/out
+java/deps
+java/*.class
+java/java.iml
