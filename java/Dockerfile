@@ -8,9 +8,3 @@ RUN \
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
-WORKDIR /root/sdk-integration-tests/java/
-
-RUN mkdir deps
-RUN cd deps
-RUN ls
-RUN git clone https://github.com/unifiedinbox/ue-java-sdk
