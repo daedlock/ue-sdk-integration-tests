@@ -1,7 +1,7 @@
 FROM ubuntu:12.04
 
 
-RUN sudo apt-get purge openjdk-\* icedtea-\* icedtea6-\*
+RUN  apt-get purge openjdk-\* icedtea-\* icedtea6-\*
 
 RUN \
   apt-get update && \
