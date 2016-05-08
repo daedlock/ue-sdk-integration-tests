@@ -1,11 +1,7 @@
-import com.google.gson.Gson;
 import com.google.gson.*;
-import jdk.nashorn.internal.parser.JSONParser;
 import org.apache.commons.io.FileUtils;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 
 /**
@@ -13,16 +9,25 @@ import java.io.IOException;
  */
 public class CommonWrappers {
 
-    public static void printError() {
+
+    public static void printError(String msg) throws IOException, InterruptedException {
+
+        ProcessBuilder pb = new ProcessBuilder("../../common/print.sh","-error",msg);
+        pb.inheritIO();
+        Process p = pb.start();
+        p.waitFor();
 
     }
 
-    public static void printSuccess() {
-
+    public static void printSuccess(String msg) throws IOException, InterruptedException {
+        ProcessBuilder pb = new ProcessBuilder("../../common/print.sh","-success",msg);
+        pb.inheritIO();
+        Process p = pb.start();
+        p.waitFor();
     }
 
     public static Config getConfig() throws IOException {
-        String json = FileUtils.readFileToString(new File("../common/conf.json"));
+        String json = FileUtils.readFileToString(new File("../../common/conf.json"));
         JsonObject conf = new JsonParser().parse(json).getAsJsonObject();
         Config config = new Config();
         config.APP_KEY = conf.get("APP_KEY").getAsString();
