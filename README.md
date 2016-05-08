@@ -24,9 +24,9 @@ docker-compose build
 
 ### Run all tests from all sdks
 ```bash
-docker run java
-docker run php
-docker run node
-docker run ruby
+docker-compose run java
+docker-compose run php
+docker-compose run node
+docker-compose run ruby
 ```
 
