@@ -29,3 +29,7 @@ docker run php
 docker run node
 docker run ruby
 ```
+
+
+#Known Issues
+* The build process may hang while building the java container if the used docker version is < `1.9`
