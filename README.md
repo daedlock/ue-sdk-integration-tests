@@ -17,7 +17,7 @@ https://docs.docker.com/compose/install/
 
 
 # How to run
-### Build docker containers specified in _doccker_compose.yml
+### Build docker containers specified in _docker_compose.yml_
 ```bash
 docker-compose build
 ```
