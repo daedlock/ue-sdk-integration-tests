@@ -21,6 +21,8 @@ RUN apt-get update && \
     apt-get install -y oracle-java8-installer && \
     apt-get clean
 
+RUN     apt-get install -y git
+
 
 # Define commonly used JAVA_HOME variable
 # ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
